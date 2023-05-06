@@ -1,0 +1,51 @@
+{
+    "name": "webifycms/theme-green",
+    "description": "Green is an official WebifyCMS default front-end theme.",
+    "type": "webifycms-theme",
+    "authors": [
+        {
+            "name": "Mohammed Shifreen",
+            "email": "mshifreen@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.1",
+        "webifycms/ext-base": "dev-development",
+        "webifycms/ext-admin": "dev-development"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10",
+        "webifycms/dev-tools": "*"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/webifycms/ext-base"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/webifycms/ext-admin"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/webifycms/dev-tools"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Green\\": "src/"
+        }
+    },
+    "optimize-autoloader": true,
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
+        }
+    }
+}
