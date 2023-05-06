@@ -1,0 +1,11 @@
+includes:
+	- vendor/webifycms/dev-tools/phpstan-default.neon
+
+parameters:
+	bootstrapFiles:
+		- vendor/yiisoft/yii2/Yii.php
+	paths:
+		- src
+		- test
+	excludePaths:
+		- vendor
