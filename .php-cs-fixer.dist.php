@@ -1,10 +1,10 @@
 <?php
 /**
- * The file is part of the "webifycms/ext-base", WebifyCMS theme package.
+ * The file is part of the "webifycms/green", WebifyCMS theme package.
  *
  * @see https://webifycms.com/theme/green
  *
- * @license Copyright (c) 2022 WebifyCMS
+ * @license Copyright (c) 2023 WebifyCMS
  * @license https://webifycms.com/theme/green/license
  * @author Mohammed Shifreen <mshifreen@gmail.com>
  */
