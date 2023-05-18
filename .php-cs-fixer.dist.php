@@ -1,6 +1,6 @@
 <?php
 /**
- * The file is part of the "webifycms/green", WebifyCMS theme package.
+ * The file is part of the "webifycms/theme-green", WebifyCMS theme package.
  *
  * @see https://webifycms.com/theme/green
  *
