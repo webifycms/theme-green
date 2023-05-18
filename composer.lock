@@ -11,7 +11,7 @@
             "version": "3.3.11",
             "source": {
                 "type": "git",
-                "url": "git@github.com:RobinHerbots/Inputmask.git",
+                "url": "https://github.com/RobinHerbots/Inputmask.git",
                 "reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
             },
             "dist": {
@@ -1325,17 +1325,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/webifycms/ext-admin.git",
-                "reference": "27a40501e077da625a6193641f1cce4aebfad8f9"
+                "reference": "1fab0cb43aa17a25e91a3588dbec5a4bedcf0ae8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webifycms/ext-admin/zipball/27a40501e077da625a6193641f1cce4aebfad8f9",
-                "reference": "27a40501e077da625a6193641f1cce4aebfad8f9",
+                "url": "https://api.github.com/repos/webifycms/ext-admin/zipball/1fab0cb43aa17a25e91a3588dbec5a4bedcf0ae8",
+                "reference": "1fab0cb43aa17a25e91a3588dbec5a4bedcf0ae8",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.1",
-                "webifycms/ext-base": "*",
+                "webifycms/ext-base": "dev-main",
                 "yiisoft/yii2": "~2.0"
             },
             "require-dev": {
@@ -1379,7 +1379,7 @@
                 "source": "https://github.com/webifycms/ext-admin/tree/main",
                 "issues": "https://github.com/webifycms/ext-admin/issues"
             },
-            "time": "2023-05-09T18:47:23+00:00"
+            "time": "2023-05-18T07:13:06+00:00"
         },
         {
             "name": "webifycms/ext-base",
