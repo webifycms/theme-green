@@ -10,11 +10,6 @@
  */
 declare(strict_types=1);
 
-namespace Green;
+require __DIR__ . '/../vendor/autoload.php';
 
-use Webify\Base\Infrastructure\Service\Theme\Theme as BaseTheme;
-
-final class Theme extends BaseTheme
-{
-
-}
+require __DIR__ . '/../vendor/yiisoft/yii2/Yii.php';

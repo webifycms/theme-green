@@ -1,2 +1,3 @@
-# theme-green
-Green is an official WebifyCMS default front-end theme
+# Green - Default WebifyCMS Theme
+
+Green is an official WebifyCMS default front-end theme.
