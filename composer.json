@@ -8,6 +8,7 @@
             "email": "mshifreen@gmail.com"
         }
     ],
+    "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
@@ -39,13 +40,18 @@
     ],
     "autoload": {
         "psr-4": {
-            "Green\\": "src/"
+            "Webify\\Green\\": "src/"
         }
     },
-    "optimize-autoloader": true,
+    "autoload-dev": {
+        "psr-4": {
+            "Webify\\Green\\Test\\": "test/"
+        }
+    },
     "config": {
         "allow-plugins": {
             "yiisoft/yii2-composer": true
-        }
+        },
+        "optimize-autoloader": true
     }
 }
