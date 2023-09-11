@@ -12,13 +12,8 @@ declare(strict_types=1);
 
 namespace Webify\Green;
 
-// use Webify\Base\Infrastructure\Service\Theme\Theme as BaseTheme;
-
 use Webify\Base\Domain\Service\Theme\ThemeInterface;
-use yii\base\Theme as BaseTheme;
-
-use function Webify\Base\Infrastructure\app;
-use function Webify\Base\Infrastructure\url;
+use Webify\Base\Infrastructure\Service\Theme\Theme as BaseTheme;
 
 /**
  * WebifyCMS Green theme main class.
@@ -28,7 +23,6 @@ final class Theme extends BaseTheme implements ThemeInterface
 	public function init(): void
 	{
 		$this->setBasePath(\dirname(__DIR__));
-		$this->setBaseUrl($this->publishAssets());
 
 		$this->pathMap = [
 			'@App/templates'  => $this->getBasePath() . '/templates',
@@ -40,15 +34,5 @@ final class Theme extends BaseTheme implements ThemeInterface
 	public function getId(): string
 	{
 		return 'green';
-	}
-
-	/**
-	 * Published assets of this theme to the public folder.
-	 */
-	private function publishAssets(): string
-	{
-		$published = app()->assetManager->publish(\dirname(__DIR__) . '/dist');
-
-		return url($published[1]);
 	}
 }
