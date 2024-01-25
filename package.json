@@ -1,0 +1,25 @@
+{
+  "name": "theme-green",
+  "version": "1.0.0",
+  "description": "Green is an official WebifyCMS default front-end theme.",
+  "main": "assets/js/site.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.69.5",
+    "vite": "^4.5.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.1"
+  }
+}

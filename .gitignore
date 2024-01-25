@@ -24,3 +24,6 @@ composer.phar
 
 # ignores the .php-cs-fixer.cache file
 .php-cs-fixer.cache
+
+# node
+/node_modules/
