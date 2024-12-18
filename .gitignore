@@ -18,6 +18,7 @@ Thumbs.db
 # composer
 /vendor/
 composer.phar
+composer.lock
 
 # Mac DS_Store Files
 .DS_Store
@@ -27,3 +28,4 @@ composer.phar
 
 # node
 /node_modules/
+package-lock.json
