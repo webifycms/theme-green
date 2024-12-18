@@ -16,7 +16,7 @@ use function Webify\Base\Infrastructure\view;
 
     <title><?php echo app()->name; ?></title>
 
-    <link href="<?php echo view()->theme->baseUrl . '/css/site.css'; ?>" rel="stylesheet">
+    <!-- <link href="<?php // echo view()->theme->baseUrl . '/css/site.css';?>" rel="stylesheet"> -->
 
     <?php view()->registerCsrfMetaTags(); ?>
     <?php view()->head(); ?>
@@ -48,7 +48,7 @@ use function Webify\Base\Infrastructure\view;
 
     <?php echo $content; ?>
 
-    <script type="module" defer src="<?php echo view()->theme->baseUrl . '/js/site.js'; ?>"></script>
+    <script type="module" src="<?php echo view()->theme->baseUrl . '/js/main.js'; ?>"></script>
 
     <?php view()->endBody(); ?>
 </body>

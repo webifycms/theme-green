@@ -1,5 +1,5 @@
 <?php
-/*
+/**
  * The file is part of the "webifycms/theme-green", WebifyCMS theme package.
  *
  * @see https://webifycms.com/theme/green
@@ -41,7 +41,7 @@ final class Theme extends BaseTheme implements ThemeInterface
 
 	private function publishAssets(): string
 	{
-		$published = app()->assetManager->publish(dirname(__DIR__) . '/dist');
+		$published = app()->assetManager->publish(\dirname(__DIR__) . '/dist');
 
 		return $published[1];
 	}
