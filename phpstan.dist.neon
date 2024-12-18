@@ -9,3 +9,7 @@ parameters:
 		- test
 	excludePaths:
 		- vendor
+		- assets
+		- resources
+		- dist
+		- node_modules
