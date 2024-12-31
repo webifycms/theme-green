@@ -27,6 +27,3 @@ composer.phar
 
 # node
 /node_modules/
-
-# dist
-/dist/
