@@ -1,45 +1,31 @@
-import { defineConfig, splitVendorChunkPlugin } from 'vite'
+import { defineConfig } from 'vite'
 import liveReload from 'vite-plugin-live-reload'
-import path from 'node:path'
 
 export default defineConfig({
-
   plugins: [
     liveReload([
-      __dirname + '/templates/**/*.php'
-    ]),
-    splitVendorChunkPlugin(),
+      './**/*.php'
+    ])
   ],
-
-  // config
-  root: 'assets',
-  base: '/',
-
+  root: './',
   build: {
-    // output dir for production build
-    outDir: '../dist',
+    outDir: 'dist',
+    assetsDir: '',
     emptyOutDir: true,
-
-    // emit manifest so PHP can find the hashed files
-    manifest: true,
-
-    // our entry
+    manifest: 'manifest.json',
     rollupOptions: {
-      input: path.resolve(__dirname, 'assets/js/main.js'),
-    }
-  },
-
-  server: {
-    strictPort: true,
-    port: 5000,
-    open: true,
-    proxy: {
-      '/': {
-        target: 'http://webify.framework.docker:8080/',
-        changeOrigin: true,
-        secure: false
+      input: {
+        green: './assets/js/main.js'
       }
     }
+  },
+  server: {
+    cors: true,
+    strictPort: true,
+    port: 5000,
+    host: '0.0.0.0',
+    watch: {
+      usePolling: true
+    }
   }
-
 })

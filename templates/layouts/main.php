@@ -1,9 +1,23 @@
-<?php declare(strict_types=1);
+<?php
+
+/**
+ * The file is part of the "webifycms/theme-green", WebifyCMS theme package.
+ *
+ * @see https://webifycms.com/theme/green
+ *
+ * @copyright Copyright (c) 2023 WebifyCMS
+ * @license https://webifycms.com/theme/green/license
+ * @author Mohammed Shifreen <mshifreen@gmail.com>
+ */
+declare(strict_types=1);
+
+use Webify\Green\ThemeAssets;
 
 use function Webify\Base\Infrastructure\app;
 use function Webify\Base\Infrastructure\home_url;
 use function Webify\Base\Infrastructure\view;
 
+ThemeAssets::register(view());
 ?>
 
 <?php view()->beginPage(); ?>
@@ -16,8 +30,6 @@ use function Webify\Base\Infrastructure\view;
 
     <title><?php echo app()->name; ?></title>
 
-    <!-- <link href="<?php // echo view()->theme->baseUrl . '/css/site.css';?>" rel="stylesheet"> -->
-
     <?php view()->registerCsrfMetaTags(); ?>
     <?php view()->head(); ?>
 </head>
@@ -26,12 +38,10 @@ use function Webify\Base\Infrastructure\view;
     <?php view()->beginBody(); ?>
 
     <header class="main-header" id="main-header">
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="<?php echo home_url(); ?>">
-                    <svg class="bi mr-2" width="32" height="32" fill="currentColor">
-                        <use xlink:href="<?php echo view()->theme->baseUrl . '/images/icons.svg#x-diamond'; ?>" />
-                    </svg>
+                    <i class="bi bi-x-diamond"></i>
                     <span><?php echo app()->name; ?></span>
                 </a>
 
@@ -47,8 +57,6 @@ use function Webify\Base\Infrastructure\view;
     </header>
 
     <?php echo $content; ?>
-
-    <script type="module" src="<?php echo view()->theme->baseUrl . '/js/main.js'; ?>"></script>
 
     <?php view()->endBody(); ?>
 </body>

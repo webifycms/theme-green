@@ -1,3 +1,8 @@
-import '../scss/styles.scss'
+// import Bootstrap's js
+import 'bootstrap'
 
-import * as bootstrap from 'bootstrap'
+// import Bootstrap's css
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+// Import our custom CSS
+import '../css/style.css'
