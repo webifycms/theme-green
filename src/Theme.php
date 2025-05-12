@@ -13,24 +13,18 @@ declare(strict_types=1);
 
 namespace Webify\Green;
 
-use Webify\Base\Domain\Service\Theme\ThemeInterface;
-use Webify\Base\Infrastructure\Service\Theme\Theme as BaseTheme;
+use Webify\Base\Infrastructure\Component\Theme\ThemeComponent;
 
 /**
  * WebifyCMS Green theme main class.
  */
-final class Theme extends BaseTheme implements ThemeInterface
+final class Theme extends ThemeComponent
 {
 	public const THEME_ID = 'green';
 
 	public function init(): void
 	{
 		$this->setBasePath(\dirname(__DIR__));
-
-		$this->pathMap    = [
-			'@App/templates' => $this->getBasePath() . '/templates',
-		];
-
 		parent::init();
 	}
 

@@ -19,7 +19,6 @@
     "vite-plugin-live-reload": "^3.0.4"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.8",
-    "bootstrap": "^5.3.3"
+    "uikit": "^3.23.2"
   }
 }

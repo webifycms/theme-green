@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The file is part of the "webifycms/theme-green", WebifyCMS theme package.
  *
@@ -10,7 +11,6 @@
  */
 declare(strict_types=1);
 
-// should require the composer autoloader on first
 require __DIR__ . '/vendor/autoload.php';
 
 use PhpCsFixer\Finder;
@@ -20,9 +20,24 @@ $finder = Finder::create()
 	->in(__DIR__)
 	->exclude([
 		'vendor',
+		'node_modules',
+		'dist',
+		'assets',
 	])
 	->ignoreDotFiles(false)
 	->name('*.php')
 ;
+$rules = [
+	'echo_tag_syntax' => [
+		'format'                         => 'short',
+		'shorten_simple_statements_only' => false,
+	],
+	'phpdoc_to_comment' => false,
+    'global_namespace_import' => [
+        'import_classes'   => true,
+        'import_constants' => false,
+        'import_functions' => true,
+    ],
+];
 
-return (new Fixer($finder))->getConfig()->setUsingCache(false);
+return (new Fixer($finder, $rules))->getConfig()->setUsingCache(false);

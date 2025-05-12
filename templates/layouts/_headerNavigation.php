@@ -11,20 +11,20 @@
  */
 declare(strict_types=1);
 
-use function Webify\Admin\Infrastructure\administration_url;
+use function Webify\Base\Infrastructure\administration_url;
 use function Webify\Base\Infrastructure\home_url;
 
 ?>
 
 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
     <li class="nav-item">
-        <a class="nav-link justify-content-center" href="<?php echo home_url(); ?>">
+        <a class="nav-link justify-content-center" href="<?= home_url(); ?>">
             <i class="bi bi-house-fill"></i>
             <span>Home</span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="<?php echo administration_url(); ?>">
+        <a class="nav-link" href="<?= administration_url(); ?>">
             <i class="bi bi-sliders"></i>
             <span>Administration</span>
         </a>

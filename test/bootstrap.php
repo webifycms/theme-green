@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The file is part of the "webifycms/theme-green", WebifyCMS theme package.
  *

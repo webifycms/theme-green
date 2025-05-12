@@ -40,12 +40,7 @@ final class ViteHelper
 	 */
 	private string $manifestFile = 'manifest.json';
 
-	/**
-	 * The URL for the development server.
-	 *
-	 * TODO: Should handle through the env variable.
-	 */
-	private string $devServerUrl = 'http://host.docker.internal:5000/';
+	public function __construct(public string $devServerUrl) {}
 
 	/**
 	 * Checks if the development server is currently running.
@@ -54,7 +49,11 @@ final class ViteHelper
 	 */
 	public function isDevServerRunning(): bool
 	{
-		return !empty(file_get_contents($this->devServerUrl . '@vite/client'));
+		try {
+			return !empty(file_get_contents($this->devServerUrl . '/@vite/client'));
+		} catch (\Throwable) {
+			return false;
+		}
 	}
 
 	/**
