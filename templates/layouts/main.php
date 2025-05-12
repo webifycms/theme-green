@@ -22,13 +22,13 @@ ThemeAssets::register(view());
 
 <?php view()->beginPage(); ?>
 <!doctype html>
-<html lang="<?php echo app()->language; ?>">
+<html lang="<?= app()->language; ?>">
 
 <head>
-    <meta charset="<?php echo app()->charset; ?>">
+    <meta charset="<?= app()->charset; ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title><?php echo app()->name; ?></title>
+    <title><?= app()->name; ?></title>
 
     <?php view()->registerCsrfMetaTags(); ?>
     <?php view()->head(); ?>
@@ -38,25 +38,35 @@ ThemeAssets::register(view());
     <?php view()->beginBody(); ?>
 
     <header class="main-header" id="main-header">
-        <nav class="navbar navbar-expand-lg bg-dark">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="<?php echo home_url(); ?>">
+                <a class="navbar-brand" href="<?= home_url(); ?>">
                     <i class="bi bi-x-diamond"></i>
-                    <span><?php echo app()->name; ?></span>
+                    <span><?= app()->name; ?></span>
                 </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                >
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <?php echo view()->render('_headerNavigation'); ?>
+                    <?= view()->render('_headerNavigation'); ?>
                 </div>
             </div>
         </nav>
     </header>
 
-    <?php echo $content; ?>
+    <?=/**
+	 * @var string $content the content will inject from the partial view files
+	 */ $content; ?>
 
     <?php view()->endBody(); ?>
 </body>

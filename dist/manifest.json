@@ -1,23 +1,11 @@
 {
   "assets/js/main.js": {
-    "file": "green-vEdusuZh.js",
+    "file": "green-D_guqSiC.js",
     "name": "green",
     "src": "assets/js/main.js",
     "isEntry": true,
     "css": [
-      "green-B1c4v8KF.css"
-    ],
-    "assets": [
-      "bootstrap-icons-BtvjY1KL.woff2",
-      "bootstrap-icons-BOrJxbIo.woff"
+      "green-CQHJPSVo.css"
     ]
-  },
-  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
-    "file": "bootstrap-icons-BOrJxbIo.woff",
-    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
-  },
-  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
-    "file": "bootstrap-icons-BtvjY1KL.woff2",
-    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   }
 }

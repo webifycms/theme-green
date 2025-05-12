@@ -10,4 +10,3 @@ parameters:
 	excludePaths:
 	    - templates
 	    - vendor
-	    - resources

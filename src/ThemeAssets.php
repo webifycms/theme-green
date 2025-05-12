@@ -31,6 +31,15 @@ final class ThemeAssets extends AssetBundle
 		'position' => View::POS_HEAD,
 	];
 
+	/**
+	 * @var array<string, mixed>
+	 */
+	public $cssOptions = [
+		'rel'        => 'preload',
+		'as'         => 'style',
+		'onload'     => "this.rel = 'stylesheet'",
+	];
+
 	private ViteHelper $viteHelper;
 
 	/**
@@ -38,9 +47,12 @@ final class ThemeAssets extends AssetBundle
 	 *
 	 * @param array<string, mixed> $config
 	 */
-	public function __construct(private readonly ConfigServiceInterface $configService, array $config = [])
+	public function __construct(
+        private readonly ConfigServiceInterface $configService,
+        array $config = []
+    )
 	{
-		$this->viteHelper = new ViteHelper();
+		$this->viteHelper = new ViteHelper($this->configService->getConfig('vite.dev_server_url'));
 
 		parent::__construct($config);
 	}
@@ -66,7 +78,7 @@ final class ThemeAssets extends AssetBundle
 			return;
 		}
 
-		$this->baseUrl = $this->configService->getConfig('vite.dev_server_url');
+		$this->baseUrl = $this->viteHelper->devServerUrl;
 		$this->js      = [
 			'@vite/client',
 			'assets/js/main.js',
