@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Webify\Green;
 
+use Throwable;
 use Webify\Base\Domain\Exception\TranslatableRuntimeException;
 
 use function Webify\Base\Infrastructure\get_alias;
@@ -40,6 +41,9 @@ final class ViteHelper
 	 */
 	private string $manifestFile = 'manifest.json';
 
+	/**
+	 * The constructor.
+	 */
 	public function __construct(public string $devServerUrl) {}
 
 	/**
@@ -51,7 +55,7 @@ final class ViteHelper
 	{
 		try {
 			return !empty(file_get_contents($this->devServerUrl . '/@vite/client'));
-		} catch (\Throwable) {
+		} catch (Throwable) {
 			return false;
 		}
 	}

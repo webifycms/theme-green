@@ -14,6 +14,7 @@ declare(strict_types=1);
 use Webify\Green\ThemeAssets;
 use yii\web\View;
 use yii\widgets\Menu;
+
 use function Webify\Base\Infrastructure\app;
 
 /**
@@ -53,13 +54,13 @@ ThemeAssets::register($this);
 
         <aside class="page-sidebar uk-position-fixed" id="pageSidebar">
             <?= Menu::widget([
-                'items'          => $this->params['sidebarNavItems'] ?? [],
-                'encodeLabels'   => false,
-                'activeCssClass' => 'uk-active',
-                'options'        => [
-                    'class' => 'uk-nav uk-nav-default sidebar-nav'
-                ]
-            ]) ?>
+            	'items'          => $this->params['sidebarNavItems'] ?? [],
+            	'encodeLabels'   => false,
+            	'activeCssClass' => 'uk-active',
+            	'options'        => [
+            		'class' => 'uk-nav uk-nav-default sidebar-nav',
+            	],
+            ]); ?>
 
             <div class="page-sidebar-footer uk-position-fixed">
                 <ul class="uk-subnav uk-subnav-pill uk-margin-remove-bottom">
@@ -85,7 +86,7 @@ ThemeAssets::register($this);
 
         <main class="page-content" id="pageContent">
             <div class="uk-container uk-container-expand">
-                <?= $content ?>
+                <?= $content; ?>
             </div>
 
             <footer class="page-footer uk-margin-top uk-text-right uk-position-fixed" id="pageFooter">

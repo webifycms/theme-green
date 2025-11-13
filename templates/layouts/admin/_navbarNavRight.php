@@ -50,7 +50,8 @@ use function Webify\Base\Infrastructure\home_url;
                         	])
                         	->items($this->params['primaryMenuItems'] ?? [])
                         	->linkClass('uk-display-block uk-text-center uk-padding-small')
-                        	->render(); ?>
+                        	->render()
+; ?>
                     </div>
                 </div>
             </div>

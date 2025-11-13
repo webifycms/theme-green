@@ -23,21 +23,15 @@ use yii\web\View;
  */
 final class ThemeAssets extends AssetBundle
 {
-	/**
-	 * @var array<string, mixed>
-	 */
 	public $jsOptions = [
 		'type'     => 'module',
 		'position' => View::POS_HEAD,
 	];
 
-	/**
-	 * @var array<string, mixed>
-	 */
 	public $cssOptions = [
-		'rel'        => 'preload',
-		'as'         => 'style',
-		'onload'     => "this.rel = 'stylesheet'",
+		'rel'    => 'preload',
+		'as'     => 'style',
+		'onload' => "this.rel = 'stylesheet'",
 	];
 
 	private ViteHelper $viteHelper;
@@ -48,10 +42,9 @@ final class ThemeAssets extends AssetBundle
 	 * @param array<string, mixed> $config
 	 */
 	public function __construct(
-        private readonly ConfigServiceInterface $configService,
-        array $config = []
-    )
-	{
+		private readonly ConfigServiceInterface $configService,
+		array $config = []
+	) {
 		$this->viteHelper = new ViteHelper($this->configService->getConfig('vite.dev_server_url'));
 
 		parent::__construct($config);
@@ -60,7 +53,7 @@ final class ThemeAssets extends AssetBundle
 	/**
 	 * {@inheritDoc}
 	 *
-	 * Initializes the necessary helper and asset configurations of the theme.
+	 * Initialises the necessary helper and asset configurations of the theme.
 	 */
 	public function init(): void
 	{
