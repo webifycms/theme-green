@@ -17,6 +17,9 @@ use function Webify\Base\Infrastructure\app;
 use function Webify\Base\Infrastructure\home_url;
 use function Webify\Base\Infrastructure\view;
 
+/**
+ * @var string $content the content will inject from the partial view files
+ */
 ThemeAssets::register(view());
 ?>
 
@@ -64,9 +67,7 @@ ThemeAssets::register(view());
         </nav>
     </header>
 
-    <?=/**
-	 * @var string $content the content will inject from the partial view files
-	 */ $content; ?>
+    <?= $content; ?>
 
     <?php view()->endBody(); ?>
 </body>

@@ -27,7 +27,8 @@ final class AdminMenuWidget extends Menu
 {
 	/**
 	 * @param array<string, mixed> $item
-     * @throws Exception
+	 *
+	 * @throws Exception
 	 */
 	protected function renderItem($item): string
 	{
@@ -44,7 +45,8 @@ final class AdminMenuWidget extends Menu
 
 	/**
 	 * @param array<string, mixed> $item
-     * @throws Exception
+	 *
+	 * @throws Exception
 	 */
 	protected function renderLabel(array $item): string
 	{

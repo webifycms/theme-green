@@ -15,6 +15,8 @@ namespace Webify\Green;
 
 use Webify\Base\Infrastructure\Component\Theme\ThemeComponent;
 
+use function dirname;
+
 /**
  * WebifyCMS Green theme main class.
  */
@@ -24,7 +26,7 @@ final class Theme extends ThemeComponent
 
 	public function init(): void
 	{
-		$this->setBasePath(\dirname(__DIR__));
+		$this->setBasePath(dirname(__DIR__));
 		parent::init();
 	}
 
