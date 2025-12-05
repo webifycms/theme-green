@@ -13,10 +13,7 @@ declare(strict_types=1);
 
 namespace Webify\Green;
 
-use Throwable;
 use Webify\Base\Domain\Exception\TranslatableRuntimeException;
-
-use function Webify\Base\Infrastructure\get_alias;
 
 /**
  * Provides utility methods for working with Vite in a PHP application.
@@ -43,22 +40,10 @@ final class ViteHelper
 
 	/**
 	 * The constructor.
-	 */
-	public function __construct(public string $devServerUrl) {}
-
-	/**
-	 * Checks if the development server is currently running.
 	 *
-	 * @return bool returns true if the development server is running, otherwise false
+	 * @param string $devServerUrl ViteJs server url
 	 */
-	public function isDevServerRunning(): bool
-	{
-		try {
-			return !empty(file_get_contents($this->devServerUrl . '/@vite/client'));
-		} catch (Throwable) {
-			return false;
-		}
-	}
+	public function __construct(public readonly string $devServerUrl) {}
 
 	/**
 	 * Retrieves the manifest file and extracts the configuration for the specified entry point.

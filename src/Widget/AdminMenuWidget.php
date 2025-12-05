@@ -14,11 +14,8 @@ declare(strict_types=1);
 namespace Webify\Green\Widget;
 
 use Exception;
-use yii\helpers\ArrayHelper;
-use yii\helpers\Html;
+use yii\helpers\{ArrayHelper, Html};
 use yii\widgets\Menu;
-
-use function Webify\Base\Infrastructure\administration_url;
 
 /**
  * Administration menu widget.

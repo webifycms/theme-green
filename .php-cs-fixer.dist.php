@@ -32,12 +32,17 @@ $rules = [
 		'format'                         => 'short',
 		'shorten_simple_statements_only' => false,
 	],
-	'phpdoc_to_comment'       => false,
-	'global_namespace_import' => [
+	'phpdoc_to_comment'                 => false,
+	'single_import_per_statement'       => false,
+	'global_namespace_import'           => [
 		'import_classes'   => true,
-		'import_constants' => false,
+		'import_constants' => true,
 		'import_functions' => true,
 	],
+	'group_import' => [
+		'group_types' => ['classy', 'functions', 'constants'],
+	],
+	'no_superfluous_phpdoc_tags' => true,
 ];
 
 return (new Fixer($finder, $rules))->getConfig()->setUsingCache(false);

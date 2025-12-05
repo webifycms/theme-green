@@ -14,8 +14,6 @@ declare(strict_types=1);
 use Webify\Base\Infrastructure\Component\View\WebViewComponent;
 use Yiisoft\Yii\Widgets\Menu;
 
-use function Webify\Base\Infrastructure\home_url;
-
 /**
  * @var WebViewComponent $this
  */
@@ -51,7 +49,8 @@ use function Webify\Base\Infrastructure\home_url;
                         	->items($this->params['primaryMenuItems'] ?? [])
                         	->linkClass('uk-display-block uk-text-center uk-padding-small')
                         	->render()
-; ?>
+;
+?>
                     </div>
                 </div>
             </div>

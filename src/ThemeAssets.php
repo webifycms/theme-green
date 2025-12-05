@@ -14,8 +14,7 @@ declare(strict_types=1);
 namespace Webify\Green;
 
 use Webify\Base\Domain\Service\Config\ConfigServiceInterface;
-use yii\web\AssetBundle;
-use yii\web\View;
+use yii\web\{AssetBundle, View};
 
 /**
  * The ThemeAssets class is responsible for managing theme assets during both development
@@ -34,6 +33,9 @@ final class ThemeAssets extends AssetBundle
 		'onload' => "this.rel = 'stylesheet'",
 	];
 
+	/**
+	 * The ViteJs helper to serve assets.
+	 */
 	private ViteHelper $viteHelper;
 
 	/**
@@ -67,7 +69,7 @@ final class ThemeAssets extends AssetBundle
 	 */
 	private function setDevAssets(): void
 	{
-		if (!$this->viteHelper->isDevServerRunning()) {
+		if (!is_dev() || !is_debug()) {
 			return;
 		}
 
@@ -84,7 +86,7 @@ final class ThemeAssets extends AssetBundle
 	 */
 	private function setProductionAssets(): void
 	{
-		if ($this->viteHelper->isDevServerRunning()) {
+		if (is_dev()) {
 			return;
 		}
 
