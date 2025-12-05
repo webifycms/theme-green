@@ -13,13 +13,6 @@ declare(strict_types=1);
 
 use Webify\Green\ThemeAssets;
 
-use function Webify\Base\Infrastructure\app;
-use function Webify\Base\Infrastructure\home_url;
-use function Webify\Base\Infrastructure\view;
-
-/**
- * @var string $content the content will inject from the partial view files
- */
 ThemeAssets::register(view());
 ?>
 
@@ -67,7 +60,9 @@ ThemeAssets::register(view());
         </nav>
     </header>
 
-    <?= $content; ?>
+    <?= /**
+	 * @var string $content the content will inject from the partial view files
+	 */ $content; ?>
 
     <?php view()->endBody(); ?>
 </body>

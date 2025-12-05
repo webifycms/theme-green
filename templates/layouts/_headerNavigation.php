@@ -11,9 +11,6 @@
  */
 declare(strict_types=1);
 
-use function Webify\Base\Infrastructure\administration_url;
-use function Webify\Base\Infrastructure\home_url;
-
 ?>
 
 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">

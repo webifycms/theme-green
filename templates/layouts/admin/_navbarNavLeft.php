@@ -11,14 +11,11 @@
  */
 declare(strict_types=1);
 
-use function Webify\Base\Infrastructure\administration_url;
-use function Webify\Base\Infrastructure\app;
-
 ?>
 
 <div class="uk-navbar-left">
-    <a href="<?= administration_url(); ?>" class="uk-navbar-item uk-logo">
+    <span class="uk-navbar-item uk-logo">
         <i class="bi bi-x-diamond"></i>
         <span><?= app()->name; ?></span>
-    </a>
+    </span>
 </div>

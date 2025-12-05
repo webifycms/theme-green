@@ -15,8 +15,6 @@ use Webify\Green\ThemeAssets;
 use yii\web\View;
 use yii\widgets\Menu;
 
-use function Webify\Base\Infrastructure\app;
-
 /**
  * @var View   $this
  * @var string $content

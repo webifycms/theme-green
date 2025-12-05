@@ -22,14 +22,25 @@ use function dirname;
  */
 final class Theme extends ThemeComponent
 {
+	/**
+	 * The theme ID.
+	 *
+	 * @var string
+	 */
 	public const THEME_ID = 'green';
 
+	/**
+	 * {@inheritdoc}
+	 */
 	public function init(): void
 	{
 		$this->setBasePath(dirname(__DIR__));
 		parent::init();
 	}
 
+	/**
+	 * Get ID.
+	 */
 	public function getId(): string
 	{
 		return self::THEME_ID;
